@@ -1,4 +1,4 @@
-package com.mma.upsc.Quiz;
+package com.mma.Quiz;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

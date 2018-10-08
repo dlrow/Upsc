@@ -1,7 +1,9 @@
-package com.mma.upsc.Quiz;
+package com.mma.Quiz;
 
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
+
+import com.mma.domain.Question;
 
 @Service
 public class QuizService {

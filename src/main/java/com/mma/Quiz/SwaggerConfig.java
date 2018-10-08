@@ -1,5 +1,5 @@
 
-package com.mma.upsc.Quiz;
+package com.mma.Quiz;
 
 import static springfox.documentation.builders.PathSelectors.regex;
 

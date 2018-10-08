@@ -1,4 +1,4 @@
-package com.mma.upsc.Quiz;
+package com.mma.domain;
 
 import java.io.Serializable;
 
