@@ -1,3 +1,4 @@
+
 package com.mma.upsc.Quiz;
 
 import static springfox.documentation.builders.PathSelectors.regex;
@@ -12,19 +13,16 @@ import springfox.documentation.spring.web.plugins.Docket;
 
 @Configuration
 public class SwaggerConfig {
-    @Bean
-    public Docket productApi() {
-        return new Docket(DocumentationType.SWAGGER_2)
-                .select()
-                .apis(RequestHandlerSelectors.basePackage("com.mma"))
-                .paths(regex("/product.*"))
-                .build()
-                .apiInfo(metaData());
-    }
-    
-    private ApiInfo metaData() {
-        return null;
-    	/*ApiInfo apiInfo = new ApiInfo("", "", "", "", "", "", ""); 
-        return apiInfo;*/
-    }
+
+	@Bean
+	public Docket productApi() {
+		return new Docket(DocumentationType.SWAGGER_2).select().
+				apis(RequestHandlerSelectors.basePackage("com.mma"))
+				.paths(regex("/.*")).build().apiInfo(metaData());
+	}
+
+	private ApiInfo metaData() {
+		ApiInfo apiInfo = new ApiInfo("", "", "", "", "", "", "");
+		return apiInfo;
+	}
 }

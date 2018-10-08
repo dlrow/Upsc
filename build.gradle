@@ -27,9 +27,13 @@ repositories {
 dependencies {
 	implementation('org.springframework.boot:spring-boot-starter-data-jpa')
 	implementation('org.springframework.boot:spring-boot-starter-jersey')
+	compile group: 'io.swagger', name: 'swagger-jersey2-jaxrs', version: '1.5.16'
+	compile ('org.springframework.boot:spring-boot-starter-data-redis')
+	compile ('org.springframework.boot:spring-boot-starter-web')
+	compile("io.springfox:springfox-swagger-ui:2.0.2")
 	compile("io.springfox:springfox-swagger2:2.0.2")
-    compile("io.springfox:springfox-swagger-ui:2.0.2")
     compile 'org.projectlombok:lombok:1.16.18'
+    compile('org.hibernate:hibernate-hikaricp:4.3.11.Final')
 	runtime('mysql:mysql-connector-java')
 	testImplementation('org.springframework.boot:spring-boot-starter-test')
 }
