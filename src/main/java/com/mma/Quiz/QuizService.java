@@ -1,17 +1,30 @@
 package com.mma.Quiz;
 
-import org.springframework.cache.annotation.Cacheable;
+import java.util.List;
+
+import javax.sql.DataSource;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.mma.domain.Question;
+import com.mma.dao.SubjectRepository;
+import com.mma.domain.Subject;
 
 @Service
 public class QuizService {
 
-	//@Cacheable("asd")
-	@Cacheable(cacheNames = "redisCacheManager", key = "#q.toString()")
-	public Question Helloqs(Question q) throws InterruptedException {
-		Thread.sleep(5000);
-		return new Question(1,"qu1");
+	@Autowired
+    DataSource dataSource;
+	
+	@Autowired
+	SubjectRepository subr;
+	
+//	@Cacheable(cacheNames = "redisCacheManager", key = "#q.toString()")
+	public void save(Subject s) {
+		subr.save(s);
+	}
+	
+	List<Subject> findAll(){
+		return subr.findAll();
 	}
 }
