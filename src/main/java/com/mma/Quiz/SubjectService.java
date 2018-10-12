@@ -11,7 +11,7 @@ import com.mma.dao.SubjectRepository;
 import com.mma.domain.Subject;
 
 @Service
-public class QuizService {
+public class SubjectService {
 
 	@Autowired
     DataSource dataSource;
