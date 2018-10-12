@@ -27,4 +27,9 @@ public class QuizService {
 	List<Subject> findAll(){
 		return subr.findAll();
 	}
+
+	public void deleteSubid(Integer subid) {
+		subr.deleteById(subid);
+		
+	}
 }
