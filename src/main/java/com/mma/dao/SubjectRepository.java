@@ -13,5 +13,4 @@ public interface SubjectRepository extends JpaRepository<Subject, Integer> {
 	
 	List<Subject> findBySubjectid(Integer id);
 
-
 }

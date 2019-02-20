@@ -9,11 +9,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import lombok.Data;
-
-@Data
 @Entity
-@Table(name = "SUBJECT")
+@Table(name = "subject")
 public class Subject implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
@@ -34,6 +31,30 @@ public class Subject implements Serializable {
 
 	public Subject(String name, String desc) {
 		this.name = name;
+		this.desc = desc;
+	}
+
+	public Integer getSubjectid() {
+		return subjectid;
+	}
+
+	public void setSubjectid(Integer subjectid) {
+		this.subjectid = subjectid;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getDesc() {
+		return desc;
+	}
+
+	public void setDesc(String desc) {
 		this.desc = desc;
 	}
 
